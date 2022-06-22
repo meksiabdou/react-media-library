@@ -1,8 +1,8 @@
-import React, {ReactNode} from "react";
+import React from "react";
 import {FileUploadListProps, FileUploadListItem} from "../types";
 import Badge from "react-bootstrap/Badge";
 
-function renderBadge(status: number): ReactNode {
+function renderBadge(status: number): any {
 	switch (status) {
 		case -1:
 			return (<Badge variant="danger">Failed</Badge>);
@@ -15,7 +15,7 @@ function renderBadge(status: number): ReactNode {
 }
 
 const FileUploadList: React.FC<FileUploadListProps> = (props: FileUploadListProps): JSX.Element => {
-	function renderList(): ReactNode[] {
+	function renderList(): any[] {
 		return props.fileUploadList.map((element: FileUploadListItem, index: number) => {
 			return (<li key={index} className="list-group-item d-flex justify-content-between align-items-center">
 				{element.fileName}

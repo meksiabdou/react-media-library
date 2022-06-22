@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FileLibraryListItem, FileLibraryProps } from "../types";
 import Col from "react-bootstrap/Col";
 import FileLibraryCard from "./FileLibraryCard";
@@ -106,7 +106,7 @@ const FileLibrary: React.FC<FileLibraryProps> = (
 		}
 	};
 
-	function renderList(): ReactNode[] {
+	function renderList(): any[] {
 		if (!props.fileLibraryList) return [];
 
 		const arrayStart = (page - 1) * itemsPerPage;
@@ -147,7 +147,7 @@ const FileLibrary: React.FC<FileLibraryProps> = (
 			});
 	}
 
-	const pagerRow: ReactNode = fileLibraryListData &&
+	const pagerRow: any = fileLibraryListData &&
 		fileLibraryListData.length > itemsPerPage && (
 			<Row>
 				<Col className="d-flex justify-content-center">

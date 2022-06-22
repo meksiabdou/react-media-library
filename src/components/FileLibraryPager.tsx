@@ -1,10 +1,10 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import {FileLibraryPagerProps} from "../types";
 import Pagination from "react-bootstrap/Pagination";
 
 const FileLibraryPager: React.FC<FileLibraryPagerProps> = (props: FileLibraryPagerProps) => {
 
-	function renderLinks(): ReactNode[] {
+	function renderLinks(): any[] {
 		const links = [];
 		const count = props.count;
 		const page = props.page;
